@@ -14,3 +14,18 @@ class TestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class TestCase(unittest.TestCase):
+    def test1(self):
+        expected = 3.14
+        self.assertEqual(expected, task.c_area(1))
+
+    def test2(self):
+        expected = 314.0
+        self.assertAlmostEqual(expected, task.c_area(10))
+
+    def test3(self):
+        expected = 0
+        self.assertAlmostEqual(expected, task.c_area(0))
+
