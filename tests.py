@@ -2,7 +2,7 @@ import unittest
 import task
 
 
-class TestCase(unittest.TestCase):
+class test_firstfunction(unittest.TestCase):
     def test1(self):
         expected = "success"
         self.assertEqual(expected, task.firstrun())
@@ -16,7 +16,7 @@ if __name__ == '__main__':
     unittest.main()
 
 
-class TestCase(unittest.TestCase):
+class test_c_radius(unittest.TestCase):
     def test1(self):
         expected = 3.14
         self.assertEqual(expected, task.c_area(1))
@@ -28,4 +28,3 @@ class TestCase(unittest.TestCase):
     def test3(self):
         expected = 0
         self.assertAlmostEqual(expected, task.c_area(0))
-
