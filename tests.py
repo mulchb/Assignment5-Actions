@@ -28,3 +28,13 @@ class test_c_radius(unittest.TestCase):
     def test3(self):
         expected = 0
         self.assertAlmostEqual(expected, task.c_area(0))
+
+
+class test_get_firstlast(unittest.TestCase):
+    def test1(self):
+        expected = [0, 10]
+        self.assertEqual(expected, task.get_firstlast([0, 1, 3, 3, 4, 5, 7, 7, 9, 9, 10]))
+
+    def test2(self):
+        expected = ["first", "last"]
+        self.assertAlmostEqual(expected, task.get_firstlast(["first", "not_last", "last"]))
