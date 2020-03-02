@@ -38,3 +38,11 @@ class test_get_firstlast(unittest.TestCase):
     def test2(self):
         expected = ["first", "last"]
         self.assertAlmostEqual(expected, task.get_firstlast(["first", "not_last", "last"]))
+
+
+class test_get_date_distance(unittest.TestCase):
+    def test1(self):
+        self.assertEqual(31, task.get_date_distance("03/22/2019", "04/22/2019"))
+
+    def test2(self):
+        self.assertEqual(994, task.get_date_distance("03/22/2019", "12/10/2021"))
